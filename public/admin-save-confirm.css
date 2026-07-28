@@ -1,0 +1,14 @@
+.approval-overlay{position:fixed;inset:0;z-index:20000;display:none;place-items:center;padding:20px;background:rgba(13,27,48,.58);backdrop-filter:blur(3px)}
+.approval-overlay.open{display:grid}
+.approval-dialog{width:min(430px,100%);padding:30px;border-radius:18px;background:#fff;text-align:center;box-shadow:0 28px 80px rgba(13,27,48,.35);animation:approvalIn .2s ease}
+.approval-icon{display:grid;place-items:center;width:54px;height:54px;margin:0 auto 16px;border-radius:50%;background:#edf2ff;color:#3659b7;font-size:26px;font-weight:800}
+.approval-dialog h3{margin:0 0 10px;color:#294a83;font-size:22px}
+.approval-message{margin:0 auto 24px;color:#66758b;line-height:1.6;font-size:14px}
+.approval-actions{display:flex;justify-content:center;gap:10px}
+.approval-actions button{border:0;border-radius:9px;padding:12px 18px;font-weight:700;cursor:pointer}
+.approval-cancel{background:#edf1f6;color:#53657d}
+.approval-confirm{background:#4662c4;color:#fff;box-shadow:0 7px 16px rgba(70,98,196,.24)}
+.approval-overlay.danger .approval-icon{background:#fff0ef;color:#c44d49}
+.approval-overlay.danger .approval-confirm{background:#c44d49}
+@keyframes approvalIn{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:520px){.approval-actions{flex-direction:column-reverse}.approval-actions button{width:100%}}

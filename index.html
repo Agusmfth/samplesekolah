@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website resmi SMA Harapan Bangsa — sekolah modern, berkarakter, dan berprestasi." />
+  <title>SMA Harapan Bangsa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="public/animations.css?v=2" />
+  <style>
+    .site-header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+    .demo-watermark{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid rgba(188,141,63,.62);border-radius:999px;background:rgba(8,43,73,.84);color:#fff;box-shadow:0 8px 24px rgba(3,29,51,.18);backdrop-filter:blur(8px);pointer-events:none}.demo-watermark span{font:700 12px 'DM Sans',sans-serif;letter-spacing:.16em;color:var(--gold-soft)}.demo-watermark small{font-size:10px;color:rgba(255,255,255,.66);border-left:1px solid rgba(255,255,255,.22);padding-left:9px}@media(max-width:640px){.demo-watermark{right:12px;bottom:12px;padding:7px 10px}.demo-watermark small{display:none}}
+    .news-image{background-size:cover;background-position:center}
+    .teachers{background:#fff}.teacher-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.teacher-card{padding:26px 22px;background:var(--paper);border:1px solid #e8e0d3;border-radius:12px 12px 34px 12px;transition:.3s}.teacher-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.teacher-avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 20px 'Playfair Display',serif;margin-bottom:20px}.avatar-navy{background:var(--navy)}.avatar-gold{background:var(--gold)}.avatar-green{background:#52765c}.avatar-plum{background:#75566f}.teacher-card h3{font:700 19px 'Playfair Display',serif;color:var(--navy);margin:0 0 4px}.teacher-card span{font-size:11px;line-height:1.4;color:#9b712d;font-weight:700}.teacher-card p{font-size:13px;color:var(--muted);margin:18px 0}.teacher-meta{border-top:1px solid var(--line);padding-top:13px;display:flex;justify-content:space-between;gap:10px}.teacher-meta b,.teacher-meta small{font-size:10px}.teacher-meta b{color:var(--navy)}.teacher-meta small{color:#8a8f96;text-align:right}.teacher-note{margin:30px auto 0;max-width:620px;display:flex;gap:15px;align-items:center;justify-content:center;text-align:center;color:#6e6659}.teacher-note span{color:var(--gold);font-size:24px}.teacher-note p{font:italic 17px/1.45 'Playfair Display',serif}@media(max-width:960px){.teacher-grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.teacher-grid{grid-template-columns:1fr}.teacher-note{align-items:flex-start;text-align:left}}
+    .site-header::after{content:"";position:absolute;inset:0;background:#082b49;z-index:0;pointer-events:none}
+    .site-header .navbar{position:relative;z-index:2}
+    @media(max-width:960px){.site-header{overflow:visible}.site-header::after{height:78px}}
+  </style>
+</head>
+<body>
+  <div class="demo-watermark" aria-hidden="true"><span>DEMO</span><small>Website preview</small></div>
+  <header class="site-header" id="top">
+    <div class="container navbar">
+      <a href="#top" class="brand" aria-label="SMA Harapan Bangsa">
+        <div class="brand-mark" data-school="initials">HB</div>
+        <div>
+          <strong data-school="shortName">Harapan Bangsa</strong>
+          <span data-school="level">Sekolah Menengah Atas</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu">
+        <a href="#profil">Profil</a>
+        <a href="#program">Akademik</a>
+        <a href="#guru">Guru</a>
+        <a href="#fasilitas">Fasilitas</a>
+        <a href="#berita">Berita</a>
+        <a href="#kontak" class="nav-cta">PPDB 2026</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-kicker"><span></span> Penerimaan siswa 2026/2027 dibuka</div>
+        <div class="eyebrow">Sekolah Menengah Atas</div>
+        <h1>Harapan <span>Bangsa.</span></h1>
+        <p data-school="tagline">Membentuk generasi berkarakter, berilmu, kreatif, dan siap bersaing di tingkat global.</p>
+        <div class="hero-actions">
+          <a href="#kontak" class="btn btn-primary">Daftar Sekarang</a>
+          <a href="#profil" class="btn btn-link">Kenali Sekolah <span>→</span></a>
+        </div>
+
+        <div class="mini-feature">
+          <div class="mini-icon">✦</div>
+          <div>
+            <strong>Pendidikan Berkualitas untuk Masa Depan</strong>
+            <span>Kurikulum adaptif, pendampingan personal, dan lingkungan belajar modern.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-overlay"></div>
+        <div class="hero-caption"><span>01</span> Lingkungan belajar yang bertumbuh bersama siswanya</div>
+        <div class="floating-card">
+          <div><strong>1.200+</strong><span>Siswa Aktif</span></div>
+          <div><strong>98%</strong><span>Lulus Tepat Waktu</span></div>
+          <div><strong>42</strong><span>Prestasi 2025</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><strong>A</strong><span>Akreditasi Unggul</span></div>
+        <div><strong>25+</strong><span>Tahun Pengalaman</span></div>
+        <div><strong>35</strong><span>Guru Profesional</span></div>
+        <div><strong>18</strong><span>Ekstrakurikuler</span></div>
+      </div>
+    </section>
+
+    <section class="section about" id="profil">
+      <div class="container two-col">
+        <div class="image-stack">
+          <img src="assets/school-thumb.jpg" alt="Lingkungan SMA Harapan Bangsa">
+          <div class="experience-badge"><strong>25+</strong><span>tahun mendidik<br>generasi bangsa</span></div>
+          <div class="quote-card">“Belajar bukan hanya untuk hari ini, tetapi untuk masa depan yang lebih baik.”</div>
+        </div>
+        <div class="section-copy">
+          <div class="eyebrow">Tentang Kami</div>
+          <h2>Sekolah yang menumbuhkan potensi setiap siswa.</h2>
+          <p>SMA Harapan Bangsa menghadirkan pendidikan yang seimbang antara akademik, karakter, kreativitas, dan kecakapan abad ke-21. Setiap siswa didampingi untuk menemukan kekuatan terbaiknya.</p>
+          <div class="check-grid">
+            <span>✓ Kurikulum Nasional Plus</span>
+            <span>✓ Pembelajaran berbasis proyek</span>
+            <span>✓ Konseling dan mentoring siswa</span>
+            <span>✓ Persiapan perguruan tinggi</span>
+          </div>
+          <a href="#" class="text-link">Selengkapnya tentang sekolah →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section programs" id="program">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Program Unggulan</div>
+            <h2>Belajar lebih relevan, aktif, dan bermakna.</h2>
+          </div>
+          <p>Program dirancang untuk membangun kompetensi akademik sekaligus kemampuan komunikasi, kolaborasi, kreativitas, dan kepemimpinan.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="program-card">
+            <span class="card-number">01</span>
+            <div class="icon-box">⚛</div>
+            <h3>Sains & Teknologi</h3>
+            <p>Eksperimen, robotika, coding, dan penelitian sederhana untuk melatih cara berpikir kritis.</p>
+            <a href="#">Lihat program →</a>
+          </article>
+          <article class="program-card featured">
+            <span class="card-number">02</span>
+            <div class="icon-box">◈</div>
+            <h3>Bahasa & Global Class</h3>
+            <p>Pembelajaran bilingual, public speaking, dan kolaborasi lintas budaya.</p>
+            <a href="#">Lihat program →</a>
+          </article>
+          <article class="program-card">
+            <span class="card-number">03</span>
+            <div class="icon-box">✎</div>
+            <h3>Seni & Kreativitas</h3>
+            <p>Ruang untuk berkarya melalui desain, musik, teater, fotografi, dan produksi digital.</p>
+            <a href="#">Lihat program →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section teachers" id="guru">
+      <div class="container">
+        <div class="section-heading compact">
+          <div>
+            <div class="eyebrow">Guru & Pengajar</div>
+            <h2>Didampingi orang-orang yang peduli.</h2>
+          </div>
+          <p>Guru kami hadir sebagai pengajar, mentor, dan partner tumbuh bagi setiap siswa.</p>
+        </div>
+        <div class="teacher-grid">
+          <article class="teacher-card"><div class="teacher-avatar avatar-navy">AR</div><div><h3>Andi Rahman, M.Pd.</h3><span>Kepala Sekolah</span></div><p>18 tahun pengalaman dalam pengembangan pendidikan dan karakter siswa.</p><div class="teacher-meta"><b>Manajemen Pendidikan</b><small>18 tahun pengalaman</small></div></article>
+          <article class="teacher-card"><div class="teacher-avatar avatar-gold">DL</div><div><h3>Dewi Lestari, S.Si.</h3><span>Guru Sains & Koordinator Olimpiade</span></div><p>Mendorong rasa ingin tahu siswa melalui eksperimen dan riset yang menyenangkan.</p><div class="teacher-meta"><b>Biologi & Riset</b><small>12 tahun pengalaman</small></div></article>
+          <article class="teacher-card"><div class="teacher-avatar avatar-green">BS</div><div><h3>Bima Santoso, S.Pd.</h3><span>Guru Bahasa Inggris</span></div><p>Membangun keberanian berkomunikasi melalui kelas bilingual dan public speaking.</p><div class="teacher-meta"><b>Bahasa & Komunikasi</b><small>10 tahun pengalaman</small></div></article>
+          <article class="teacher-card"><div class="teacher-avatar avatar-plum">NA</div><div><h3>Nadia Anindita, M.Sn.</h3><span>Guru Seni & Kreativitas</span></div><p>Membuka ruang eksplorasi bagi siswa lewat desain, musik, dan produksi digital.</p><div class="teacher-meta"><b>Seni & Desain</b><small>8 tahun pengalaman</small></div></article>
+        </div>
+        <div class="teacher-note"><span>✦</span><p>“Guru terbaik bukan yang memberi semua jawaban, tetapi yang menyalakan keinginan untuk terus bertanya.”</p></div>
+      </div>
+    </section>
+
+    <section class="section facilities" id="fasilitas">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Fasilitas Sekolah</div>
+            <h2>Lingkungan belajar yang aman dan modern.</h2>
+          </div>
+          <p>Fasilitas yang mendukung siswa untuk belajar, bereksperimen, berkolaborasi, dan berkembang secara optimal.</p>
+        </div>
+
+        <div class="facility-grid">
+          <div class="facility large" style="background-image:url('assets/hero-school.jpg')">
+            <span>Ruang Kelas Modern</span>
+          </div>
+          <div class="facility tone-one" style="background-image:url('assets/facility-lab.png')"><span>Laboratorium Sains</span></div>
+          <div class="facility tone-two" style="background-image:url('assets/facility-library.png')"><span>Perpustakaan Digital</span></div>
+          <div class="facility tone-three" style="background-image:url('assets/facility-sports.png')"><span>Lapangan Olahraga</span></div>
+          <div class="facility tone-four" style="background-image:url('assets/facility-studio.png')"><span>Studio Kreatif</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section news" id="berita">
+      <div class="container">
+        <div class="section-heading compact">
+          <div>
+            <div class="eyebrow">Berita & Kegiatan</div>
+            <h2>Cerita terbaru dari sekolah.</h2>
+          </div>
+          <a href="#" class="text-link">Lihat semua berita →</a>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-image visual-one" style="background-image:url('assets/news-olimpiade.png')"></div>
+            <div class="news-content">
+              <span class="news-tag">Prestasi</span>
+              <h3>Tim Olimpiade Sains meraih juara tingkat provinsi</h3>
+              <p>18 Juli 2026 · 4 menit baca</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image visual-two" style="background-image:url('assets/news-leadership.png')"></div>
+            <div class="news-content">
+              <span class="news-tag">Kegiatan</span>
+              <h3>Harapan Bangsa Leadership Camp 2026</h3>
+              <p>12 Juli 2026 · 3 menit baca</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image visual-three" style="background-image:url('assets/news-pameran.png')"></div>
+            <div class="news-content">
+              <span class="news-tag">Akademik</span>
+              <h3>Pameran proyek kreatif dan teknologi siswa</h3>
+              <p>5 Juli 2026 · 5 menit baca</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="container testimonial-wrap">
+        <div>
+          <div class="eyebrow light">Testimoni Orang Tua</div>
+          <blockquote>“Sekolah ini tidak hanya fokus pada nilai, tetapi juga membentuk rasa percaya diri, kedisiplinan, dan tanggung jawab anak kami.”</blockquote>
+          <div class="person"><strong>Rina Pratiwi</strong><span>Orang tua siswa kelas XI</span></div>
+        </div>
+        <div class="testimonial-badge">
+          <strong>4.9/5</strong>
+          <span>Kepuasan Orang Tua</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontak">
+      <div class="container contact-box">
+        <div>
+          <div class="eyebrow">Penerimaan Peserta Didik Baru</div>
+          <h2>Mulai perjalanan terbaikmu bersama Harapan Bangsa.</h2>
+          <p>Dapatkan informasi jadwal, biaya, program beasiswa, dan prosedur pendaftaran tahun ajaran 2026/2027.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="https://wa.me/62895321272932" class="btn btn-primary">Hubungi via WhatsApp</a>
+          <a href="mailto:info@harapanbangsa.sch.id" class="btn btn-outline">Kirim Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand footer-brand">
+          <div class="brand-mark">HB</div>
+          <div><strong>Harapan Bangsa</strong><span>Sekolah Menengah Atas</span></div>
+        </a>
+        <p>Jl. Pendidikan No. 10, Kota Anda<br>Senin–Jumat, 07.00–16.00</p>
+      </div>
+      <div><h4>Informasi</h4><a href="#profil">Profil Sekolah</a><a href="#program">Akademik</a><a href="#fasilitas">Fasilitas</a></div>
+      <div><h4>Layanan</h4><a href="#kontak">PPDB Online</a><a href="#">Portal Siswa</a><a href="#">Portal Guru</a></div>
+      <div><h4>Kontak</h4><a href="tel:+62895321272932">0895 3212 72932</a><a href="mailto:info@harapanbangsa.sch.id">info@harapanbangsa.sch.id</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="container copyright">© 2026 SMA Harapan Bangsa. Seluruh hak cipta dilindungi.</div>
+  </footer>
+
+  <script src="data/site-config.js"></script>
+  <script src="script.js"></script>
+  <script src="public/section-animations.js?v=3"></script>
+  <script src="public/mobile-nav.js?v=3"></script>
+</body>
+</html>

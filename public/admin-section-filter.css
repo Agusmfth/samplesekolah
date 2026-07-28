@@ -1,0 +1,1 @@
+.editor-section.section-hidden{display:none!important}.editor-section:not(.section-hidden){animation:sectionIn .28s ease}@keyframes sectionIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}

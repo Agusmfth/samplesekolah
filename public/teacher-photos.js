@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{(window.teacherPhotos||[]).forEach((teacher,index)=>{const avatar=document.querySelectorAll('.teacher-avatar')[index];if(!avatar||!teacher.photo)return;avatar.style.backgroundImage=`url('${window.teacherAssetBase}${teacher.photo}')`;avatar.classList.add('has-photo');avatar.textContent=''})});

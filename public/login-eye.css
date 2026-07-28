@@ -1,0 +1,5 @@
+.password-toggle{right:10px!important;top:16px!important;display:grid!important;place-items:center;width:38px!important;height:38px!important;padding:8px!important;font-size:0!important}
+.password-toggle svg{display:block;width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.password-toggle .eye-closed{display:none}
+.password-toggle.is-visible .eye-open{display:none}
+.password-toggle.is-visible .eye-closed{display:block}
