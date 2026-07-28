@@ -5,7 +5,7 @@
   <title>Login · {{ config('school.name') }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('style.css') }}"><link rel="stylesheet" href="{{ asset('portal.css') }}"><link rel="stylesheet" href="{{ asset('login-refresh.css') }}?v={{ filemtime(public_path('login-refresh.css')) }}"><link rel="stylesheet" href="{{ asset('login-eye.css') }}?v={{ filemtime(public_path('login-eye.css')) }}">
+  <link rel="stylesheet" href="{{ asset('style.css') }}"><link rel="stylesheet" href="{{ asset('portal.css') }}"><link rel="stylesheet" href="{{ asset('login-refresh.css') }}?v={{ filemtime(public_path('login-refresh.css')) }}"><link rel="stylesheet" href="{{ asset('login-eye.css') }}?v={{ filemtime(public_path('login-eye.css')) }}"><link rel="stylesheet" href="{{ asset('login-status.css') }}?v={{ filemtime(public_path('login-status.css')) }}">
 </head>
 <body class="auth-page">
 <main class="auth-layout">
@@ -24,5 +24,5 @@
     </form><p class="auth-help">Akses bermasalah? Hubungi administrator sekolah.</p>
   </div></section>
 </main>
-<script>const toggle=document.querySelector('.password-toggle'),password=document.querySelector('#login-password');toggle.addEventListener('click',()=>{const visible=password.type==='text';password.type=visible?'password':'text';toggle.classList.toggle('is-visible',!visible);toggle.setAttribute('aria-label',visible?'Tampilkan kata sandi':'Sembunyikan kata sandi');});</script>
+<script>const toggle=document.querySelector('.password-toggle'),password=document.querySelector('#login-password');toggle.addEventListener('click',()=>{const visible=password.type==='text';password.type=visible?'password':'text';toggle.classList.toggle('is-visible',!visible);toggle.setAttribute('aria-label',visible?'Tampilkan kata sandi':'Sembunyikan kata sandi');});</script><script defer src="{{ asset('login-status.js') }}?v={{ filemtime(public_path('login-status.js')) }}"></script>
 </body></html>

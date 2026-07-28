@@ -18,7 +18,7 @@ Route::post('/login', function (Request $request) {
     $request->session()->regenerate();
     $request->session()->put('school_admin', true);
     $request->session()->put('admin_email', $admin['email']);
-    return redirect()->route('dashboard');
+    return redirect()->route('dashboard')->with('success', 'Login berhasil. Selamat datang di dashboard sekolah.');
 })->name('login.store');
 Route::get('/dashboard', function (Request $request) {
     abort_unless($request->session()->get('school_admin'), 403);
