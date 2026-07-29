@@ -2,12 +2,16 @@
 <script defer src="{{ asset('admin-teacher-upload.js') }}?v={{ filemtime(public_path('admin-teacher-upload.js')) }}"></script>
 <script defer src="{{ asset('admin-facility-upload.js') }}?v={{ filemtime(public_path('admin-facility-upload.js')) }}"></script>
 <script defer src="{{ asset('admin-news-upload.js') }}?v={{ filemtime(public_path('admin-news-upload.js')) }}"></script>
+<script defer src="{{ asset('admin-profile-upload.js') }}?v={{ filemtime(public_path('admin-profile-upload.js')) }}"></script>
+<script>window.profileVideoUrl=@json($content['school']['profile_video_url'] ?? '');window.newsYoutubeUrls=@json(collect($content['news'] ?? [])->pluck('youtube_url')->values());</script>
+<script defer src="{{ asset('admin-youtube-fields.js') }}?v={{ filemtime(public_path('admin-youtube-fields.js')) }}"></script>
 <script defer src="{{ asset('admin-save-confirm.js') }}?v={{ filemtime(public_path('admin-save-confirm.js')) }}"></script>
 <script>window.adminSuccessMessage = @json(session('success'));</script>
 <script defer src="{{ asset('admin-success-animation.js') }}?v={{ filemtime(public_path('admin-success-animation.js')) }}"></script>
 <link rel="stylesheet" href="{{ asset('admin-save-confirm.css') }}?v={{ filemtime(public_path('admin-save-confirm.css')) }}">
 <link rel="stylesheet" href="{{ asset('admin-success-animation.css') }}?v={{ filemtime(public_path('admin-success-animation.css')) }}">
 <link rel="stylesheet" href="{{ asset('admin-facility-upload.css') }}?v={{ filemtime(public_path('admin-facility-upload.css')) }}">
+<link rel="stylesheet" href="{{ asset('admin-profile-upload.css') }}?v={{ filemtime(public_path('admin-profile-upload.css')) }}">
 <link rel="stylesheet" href="{{ asset('admin-save-visibility.css') }}?v={{ filemtime(public_path('admin-save-visibility.css')) }}">
 <link rel="stylesheet" href="{{ asset('admin-modal-footer.css') }}?v={{ filemtime(public_path('admin-modal-footer.css')) }}">
 <link rel="stylesheet" href="{{ asset('admin-actions.css') }}?v={{ filemtime(public_path('admin-actions.css')) }}">

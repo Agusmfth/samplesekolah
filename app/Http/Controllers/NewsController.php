@@ -16,7 +16,7 @@ class NewsController extends Controller
         return view('news.show', [
             'school' => config('school'),
             'article' => $article,
-            'related' => $articles->where('slug', '!=', $slug)->take(2),
+            'related' => $articles->values(),
         ]);
     }
 }
