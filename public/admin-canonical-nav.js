@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="/admin/content#guru"><i>♧</i><span>Guru & Pengajar</span></a>
     <a href="/admin/content#fasilitas"><i>▣</i><span>Fasilitas</span></a>
     <a href="/admin/content#berita"><i>▤</i><span>Berita & Artikel</span></a>
+    <a href="/admin/content#testimoni"><i>★</i><span>Testimoni</span></a>
     <div class="mz-caption">Layanan</div>
     <a href="/admin/content#kontak"><i>◉</i><span>PPDB & Kontak</span></a>
     <div class="mz-caption">Keamanan</div>

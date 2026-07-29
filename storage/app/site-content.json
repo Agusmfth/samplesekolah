@@ -209,5 +209,28 @@
             "name": "Studio Kreatif",
             "image": "assets\/facility-studio.png"
         }
+    ],
+    "testimonials": [
+        {
+            "quote": "Sekolah ini tidak hanya fokus pada nilai, tetapi juga membentuk rasa percaya diri, kedisiplinan, dan tanggung jawab anak kami.",
+            "name": "Rina Pratiwi",
+            "role": "Orang tua siswa kelas XI",
+            "rating": "4.9\/5",
+            "rating_label": "Kepuasan Orang Tua"
+        },
+        {
+            "quote": "asda",
+            "name": "asdsa",
+            "role": "asdasd",
+            "rating": "bikin a",
+            "rating_label": "Kepuasaan Orang Tua"
+        },
+        {
+            "quote": "adwda",
+            "name": "as",
+            "role": "adawd",
+            "rating": "4.5\/5",
+            "rating_label": "Kepuasan Orang Tua"
+        }
     ]
 }

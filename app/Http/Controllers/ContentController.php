@@ -55,13 +55,14 @@ class ContentController extends Controller
     public static function load(): array
     {
         $file = storage_path('app/site-content.json');
-        if (! is_file($file)) return ['school' => [], 'news' => config('news'), 'programs' => config('programs'), 'teachers' => config('teachers'), 'facilities' => config('facilities')];
+        if (! is_file($file)) return ['school' => [], 'news' => config('news'), 'programs' => config('programs'), 'teachers' => config('teachers'), 'facilities' => config('facilities'), 'testimonials' => config('testimonials')];
         $data = json_decode(file_get_contents($file), true);
-        if (! is_array($data)) return ['school'=>[],'news'=>config('news'),'programs'=>config('programs'),'teachers'=>config('teachers'),'facilities'=>config('facilities')];
+        if (! is_array($data)) return ['school'=>[],'news'=>config('news'),'programs'=>config('programs'),'teachers'=>config('teachers'),'facilities'=>config('facilities'),'testimonials'=>config('testimonials')];
         if (empty($data['programs'])) $data['programs'] = config('programs');
         if (empty($data['facilities'])) $data['facilities'] = config('facilities');
         if (empty($data['teachers'])) $data['teachers'] = config('teachers');
-        return array_replace_recursive(['school'=>[],'news'=>config('news'),'programs'=>config('programs'),'teachers'=>config('teachers'),'facilities'=>config('facilities')], $data);
+        if (empty($data['testimonials'])) $data['testimonials'] = config('testimonials');
+        return array_replace_recursive(['school'=>[],'news'=>config('news'),'programs'=>config('programs'),'teachers'=>config('teachers'),'facilities'=>config('facilities'),'testimonials'=>config('testimonials')], $data);
     }
 
     public function edit(Request $request): View
@@ -81,6 +82,16 @@ class ContentController extends Controller
             'profile_image_upload' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
             'profile_video_url' => ['nullable', 'url', 'max:500'],
             'news.*.youtube_url' => ['nullable', 'url', 'max:500'],
+            'testimonial_quote' => ['nullable', 'string', 'max:1000'],
+            'testimonial_name' => ['nullable', 'string', 'max:120'],
+            'testimonial_role' => ['nullable', 'string', 'max:160'],
+            'testimonial_rating' => ['nullable', 'string', 'max:20'],
+            'testimonial_rating_label' => ['nullable', 'string', 'max:100'],
+            'testimonials.*.quote' => ['required', 'string', 'max:1000'],
+            'testimonials.*.name' => ['required', 'string', 'max:120'],
+            'testimonials.*.role' => ['nullable', 'string', 'max:160'],
+            'testimonials.*.rating' => ['nullable', 'string', 'max:20'],
+            'testimonials.*.rating_label' => ['nullable', 'string', 'max:100'],
         ], [
             'teachers.*.photo_upload.image' => 'Foto guru harus berupa gambar.',
             'teachers.*.photo_upload.mimes' => 'Foto guru harus berformat JPG, PNG, atau WebP.',
@@ -100,7 +111,7 @@ class ContentController extends Controller
         ]);
         $current = self::load();
         $school = $current['school'];
-        foreach (['name','short_name','level','initials','tagline','principal','principal_quote','profile_video_url','phone','email','address','profile_title','profile','experience_years','benefits','vision','mission','hero_announcement','hero_caption','hero_primary_button','hero_secondary_button','hero_feature_title','hero_feature_text','hero_stat_1_value','hero_stat_1_label','hero_stat_2_value','hero_stat_2_label','hero_stat_3_value','hero_stat_3_label','trust_1_value','trust_1_label','trust_2_value','trust_2_label','trust_3_value','trust_3_label','trust_4_value','trust_4_label','ppdb_label'] as $field) {
+        foreach (['name','short_name','level','initials','tagline','principal','principal_quote','profile_video_url','testimonial_quote','testimonial_name','testimonial_role','testimonial_rating','testimonial_rating_label','phone','email','address','profile_title','profile','experience_years','benefits','vision','mission','hero_announcement','hero_caption','hero_primary_button','hero_secondary_button','hero_feature_title','hero_feature_text','hero_stat_1_value','hero_stat_1_label','hero_stat_2_value','hero_stat_2_label','hero_stat_3_value','hero_stat_3_label','trust_1_value','trust_1_label','trust_2_value','trust_2_label','trust_3_value','trust_3_label','trust_4_value','trust_4_label','ppdb_label'] as $field) {
             if ($request->has($field)) $school[$field] = trim((string) $request->input($field));
         }
         if ($request->hasFile('hero_image_upload')) {
@@ -142,7 +153,7 @@ class ContentController extends Controller
         $payload = $current;
         $payload['school'] = $school;
         $payload['news'] = $news ?: $current['news'];
-        foreach (['programs', 'teachers', 'facilities'] as $group) {
+        foreach (['programs', 'teachers', 'facilities', 'testimonials'] as $group) {
             if ($request->has($group)) {
                 $items = [];
                 foreach ($request->input($group, []) as $index => $item) {
